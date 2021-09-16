@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Login-form</title>
+        <link type="text/css" rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h2>Sign up</h2>
+            <form>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" type="email"/>
+
+                </div>
+<div>
+    <label for="name">Username</label>
+    <input id="name" type="text"/>
+
+</div>
+<div>
+    <label for="pass">Password</label>
+    <input id="pass" type="password"/>
+
+</div>
+
+<div>
+    <label for="word">Confirm Password</label>
+    <input id="word" type="password"/>
+
+</div>
+
+                <input type="button" value="Singn Up" />
+            </form>
+        </div>
+
+        <script>
+            const label = document.querySelector("label");
+            const inpt = document.querySelectorAll("input");
+
+            inpt.forEach(input=>{
+          input.addEventListener("focus",()=>{
+           
+            if(input.type === "button"){
+                return;
+            }
+            const label = input.previousElementSibling;
+            //input.previousElementSibling.sytle.color = "red";
+            label.classList.toggle("move");
+           // label.style.transform = "translateY(-10px)";
+            
+            
+          })
+            });
+
+            inpt.forEach(input=>{
+          input.addEventListener("blur",()=>{
+
+            if(input.type === "button"){
+                return;
+            }
+            const label = input.previousElementSibling;
+            //input.previousElementSibling.sytle.color = "red";
+            label.classList.toggle("move");
+           // label.style.transform = "translateY(-10px)";
+            
+            //console.info(input.previousElementSibling);
+          })
+            });
+            
+        </script>
+    </body>
+</html>

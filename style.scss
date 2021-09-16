@@ -1,0 +1,35 @@
+$page-color: rgba(206, 199, 199, 0.5);
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $page-color;
+}
+
+.container{
+    background-color: lighten($page-color, 80%);
+    padding: 5rem;
+    box-shadow:3px 5px 10px 4px;
+}
+form > div{
+    margin-bottom: 1rem;
+    //position: relative;
+}
+input{
+    border-color: lighten(rgb(118, 118, 118),30%);
+    
+}
+label{
+    display: block;
+    transform: translateY(20px);
+    margin-left:1rem;
+    transition: all 1s ease;
+}
+.move{
+    color:red;
+    transform: translateY(-8px);
+    font-size: 2rem;
+    //transform: scaleY(0.7)
+}
